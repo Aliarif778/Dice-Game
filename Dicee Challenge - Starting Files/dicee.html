@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      >
+      <h1 class="abc">🎌 Player 1 Wins !</h1>
+      <h1 class="def">🎌Player 2 Wins !</h1>
+      <h1 class="ghi">Try Again</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="" />
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="" />
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    🎲 Designed by Muhammad Ali Arif 🎲
+  </footer>
+  <script>
+    var numbers = Math.floor(Math.random() * 7);
+
+    if (numbers == 0) {
+      document
+        .querySelector("img.img1")
+        .setAttribute("src", "images/dice1.png");
+    } else if (numbers == 1) {
+      document
+        .querySelector("img.img1")
+        .setAttribute("src", "images/dice2.png");
+    } else if (numbers == 2) {
+      document
+        .querySelector("img.img1")
+        .setAttribute("src", "images/dice3.png");
+    } else if (numbers == 3) {
+      document
+        .querySelector("img.img1")
+        .setAttribute("src", "images/dice4.png");
+    } else if (numbers == 4) {
+      document
+        .querySelector("img.img1")
+        .setAttribute("src", "images/dice5.png");
+    } else {
+      document
+        .querySelector("img.img1")
+        .setAttribute("src", "images/dice6.png");
+    }
+
+    var number = Math.floor(Math.random() * 6);
+    if (number == 0) {
+      document
+        .querySelector("img.img2")
+        .setAttribute("src", "images/dice1.png");
+    } else if (number == 1) {
+      document
+        .querySelector("img.img2")
+        .setAttribute("src", "images/dice2.png");
+    } else if (number == 2) {
+      document
+        .querySelector("img.img2")
+        .setAttribute("src", "images/dice3.png");
+    } else if (number == 3) {
+      document
+        .querySelector("img.img2")
+        .setAttribute("src", "images/dice4.png");
+    } else if (number == 4) {
+      document
+        .querySelector("img.img2")
+        .setAttribute("src", "images/dice5.png");
+    } else {
+      document
+        .querySelector("img.img2")
+        .setAttribute("src", "images/dice6.png");
+    }
+    if (number > numbers) {
+      document.querySelector("h1.abc").classList.add("hidden");
+      document.querySelector("h1.ghi").classList.add("hidden");
+    } else if (number < numbers) {
+      document.querySelector("h1.def").classList.add("hidden");
+      document.querySelector("h1.ghi").classList.add("hidden");
+    } else if (number == numbers) {
+      document.querySelector("h1.abc").classList.add("hidden");
+      document.querySelector("h1.def").classList.add("hidden");
+    }
+  </script>
+</html>
